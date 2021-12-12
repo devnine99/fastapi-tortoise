@@ -1,4 +1,6 @@
-DATABASE = {
+from config.settings.base import *
+
+DATABASE.update({
     'connections': {
         'default': {
             'engine': 'tortoise.backends.asyncpg',
@@ -11,10 +13,4 @@ DATABASE = {
             },
         },
     },
-    'apps': {
-        'models': {
-            'models': ['aerich.models', 'app.models'],
-        },
-    },
-    'routers': ['config.router.Router'],
-}
+})

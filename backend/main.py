@@ -9,10 +9,11 @@ os.environ.setdefault('SETTINGS_MODULE', 'config.settings.local')
 
 
 def create_app():
-    from config.settings import settings
     app = FastAPI(title="FastAPI and TortoiseORM")
     app.include_router(v1_router)
+    from config.settings import settings
     register_tortoise(app, config=settings.DATABASE)
+
     return app
 
 
