@@ -26,5 +26,5 @@ DATABASE = {
             'models': ['aerich.models', 'app.models'],
         },
     },
-    'routers': ['config.routers'],
+    'routers': ['config.router.Router'],
 }
