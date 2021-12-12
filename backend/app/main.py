@@ -6,7 +6,7 @@ from config.settings import settings
 
 
 def create_app():
-    app = FastAPI(title='FastAPI and TortoiseORM')
+    app = FastAPI(title='FastAPI')
     app.include_router(v1_router)
     register_tortoise(app, config=settings.DATABASE)
 
