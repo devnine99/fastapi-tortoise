@@ -2,4 +2,3 @@
 tortoise_orm = "config.settings.local.DATABASE"
 location = "./migrations"
 src_folder = "./."
-
