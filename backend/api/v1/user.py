@@ -3,8 +3,8 @@ from typing import List
 from fastapi import APIRouter
 from tortoise.contrib.fastapi import HTTPNotFoundError
 
-from app.models import User
-from app.schemas import User_Pydantic, UserIn_Pydantic
+from app.models.user import User
+from app.schemas.user import User_Pydantic, UserIn_Pydantic
 
 router = APIRouter(prefix='/user', tags=['user'])
 
