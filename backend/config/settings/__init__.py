@@ -11,7 +11,7 @@ class Settings:
     def _setup(self):
         settings_module = os.getenv('SETTINGS_MODULE')
         mod = importlib.import_module(settings_module)
-        for config_key in mod.__dir__():
+        for config_key in dir(mod):
             if config_key.isupper():
                 config_value = getattr(mod, config_key)
                 setattr(self, config_key, config_value)
