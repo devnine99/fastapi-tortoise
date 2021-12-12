@@ -19,12 +19,12 @@ DATABASE = {
                 'user': 'test',
                 'password': 'test123!',
             },
-        }
+        },
     },
     'apps': {
         'models': {
-            'models': ['app.models'],
+            'models': ['aerich.models', 'app.models'],
             'default_connection': 'default',
-        }
+        },
     },
 }
